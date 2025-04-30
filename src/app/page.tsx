@@ -1,5 +1,5 @@
 import { Box, Container, Flex, Heading, Text, Button, Stack } from "@chakra-ui/react"
-
+import { ThemeSwitcher } from "../components/ThemeSwitcher"
 export default function Home() {
   return (
     <Box minH="100vh" display="flex" flexDirection="column">
@@ -13,6 +13,7 @@ export default function Home() {
               <Button variant="ghost">Pricing</Button>
               <Button variant="ghost">About</Button>
               <Button>Get Started</Button>
+              <ThemeSwitcher />
             </Stack>
           </Flex>
         </Container>
