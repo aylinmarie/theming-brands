@@ -2,11 +2,11 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-type Theme = 'default' | 'nike';
+export type Theme = 'default' | 'nike' | 'adidas' | 'puma';
 
 interface ThemeContextType {
   theme: Theme;
-  toggleTheme: () => void;
+  setTheme: (theme: Theme) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -23,15 +23,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'default' ? 'nike' : 'default';
+  const handleThemeChange = (newTheme: Theme) => {
     setTheme(newTheme);
     document.body.setAttribute('data-colorscheme', newTheme);
     localStorage.setItem('theme', newTheme);
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme: handleThemeChange }}>
       {children}
     </ThemeContext.Provider>
   );

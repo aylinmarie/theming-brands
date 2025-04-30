@@ -1,10 +1,16 @@
 @import "./themes/nike.css";
+@import "./themes/adidas.css";
 
 [data-colorscheme="default"] {
   /* Colors - Brand */
   --color-brand-primary: #FFE01B;
   --color-brand-secondary: #00B4D8;
   --color-brand-tertiary: #FF6B6B;
+  
+  /* Colors - Accent */
+  --color-accent-primary: #FFE01B;
+  --color-accent-secondary: #00B4D8;
+  --color-accent-tertiary: #FF6B6B;
   
   /* Colors - Neutral */
   --color-neutral-100: #FFF;
@@ -25,11 +31,52 @@
   --color-background-secondary: var(--color-neutral-200);
   --color-border: var(--color-neutral-300);
   
+  /* Colors - Interactive */
+  --color-interactive-primary: var(--color-brand-primary);
+  --color-interactive-primary-hover: #E6C900;
+  --color-interactive-primary-active: #CCB200;
+  --color-interactive-secondary: var(--color-neutral-200);
+  --color-interactive-secondary-hover: var(--color-neutral-300);
+  --color-interactive-secondary-active: var(--color-neutral-400);
+  --color-interactive-danger: var(--color-brand-tertiary);
+  --color-interactive-danger-hover: #E65A5A;
+  --color-interactive-danger-active: #CC4A4A;
+  
+  /* Colors - States */
+  --color-state-hover: var(--color-neutral-200);
+  --color-state-active: var(--color-neutral-300);
+  --color-state-focus: var(--color-brand-primary);
+  --color-state-disabled: var(--color-neutral-400);
+  --color-state-selected: var(--color-brand-primary);
+  --color-state-selected-hover: var(--color-interactive-primary-hover);
+  
+  /* Colors - Feedback */
+  --color-feedback-success: #2ECC71;
+  --color-feedback-success-light: #E6F5ED;
+  --color-feedback-error: #E74C3C;
+  --color-feedback-error-light: #FFE6E6;
+  --color-feedback-warning: #F1C40F;
+  --color-feedback-warning-light: #FFF5E6;
+  --color-feedback-info: #3498DB;
+  --color-feedback-info-light: #E6F0FF;
+  
   /* Colors - Status */
-  --color-success: #2ECC71;
-  --color-error: #E74C3C;
-  --color-warning: #F1C40F;
-  --color-info: #3498DB;
+  --color-success: var(--color-feedback-success);
+  --color-error: var(--color-feedback-error);
+  --color-warning: var(--color-feedback-warning);
+  --color-info: var(--color-feedback-info);
+  
+  /* Colors - Surface */
+  --color-surface-primary: var(--color-background-primary);
+  --color-surface-secondary: var(--color-background-secondary);
+  --color-surface-tertiary: var(--color-neutral-300);
+  --color-surface-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* Colors - Border */
+  --color-border-primary: var(--color-border);
+  --color-border-secondary: var(--color-neutral-400);
+  --color-border-tertiary: var(--color-neutral-500);
+  --color-border-focus: var(--color-state-focus);
   
   /* Typography */
   --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -97,7 +144,7 @@ body {
 
 .chakra-button:not([data-variant="ghost"]) {
   color: var(--color-text-primary);
-  background-color: var(--color-brand-primary);
+  background-color: var(--color-interactive-primary);
 }
 
 .chakra-button[data-variant="ghost"] {
