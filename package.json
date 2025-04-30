@@ -3,23 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "stylelint": "stylelint \"**/*.{css,scss}\"",
+    "stylelint:fix": "stylelint \"**/*.{css,scss}\" --fix"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.4.2",
+    "@chakra-ui/react": "^3.16.1",
+    "@chakra-ui/system": "^2.6.2",
+    "@chakra-ui/theme": "^3.4.6",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "framer-motion": "^12.9.2",
+    "next": "15.3.1",
+    "next-themes": "^0.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "stylelint": "^15.10.3",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-standard": "^34.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5"
   }
 }
