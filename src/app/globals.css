@@ -80,6 +80,7 @@
   
   /* Typography */
   --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -164,11 +165,13 @@ body {
 .chakra-heading {
   font-weight: 700;
   color: var(--color-text-primary);
+  font-family: var(--font-family-heading);
 }
 
 /* Text styles */
 .chakra-text {
   color: var(--color-text-secondary);
+  font-family: var(--font-family-base);
 }
 
 /* Container styles */
