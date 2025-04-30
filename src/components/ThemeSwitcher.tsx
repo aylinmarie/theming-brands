@@ -12,8 +12,8 @@ export const ThemeSwitcher = () => {
         padding: '8px 16px',
         borderRadius: '4px',
         border: 'none',
-        backgroundColor: 'var(--primary-color)',
-        color: 'white',
+        backgroundColor: 'var(--color-background-primary)',
+        color: 'var(--color-text-primary)',
         cursor: 'pointer',
         fontSize: '14px',
       }}
