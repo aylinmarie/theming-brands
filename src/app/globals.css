@@ -1,134 +1,6 @@
 @import "./themes/nike.css";
 @import "./themes/adidas.css";
 
-[data-colorscheme="default"] {
-  /* Colors - Brand */
-  --color-brand-primary: #FFE01B;
-  --color-brand-secondary: #00B4D8;
-  --color-brand-tertiary: #FF6B6B;
-  
-  /* Colors - Accent */
-  --color-accent-primary: #FFE01B;
-  --color-accent-secondary: #00B4D8;
-  --color-accent-tertiary: #FF6B6B;
-  
-  /* Colors - Neutral */
-  --color-neutral-100: #FFF;
-  --color-neutral-200: #F8F9FA;
-  --color-neutral-300: #E9ECEF;
-  --color-neutral-400: #DEE2E6;
-  --color-neutral-500: #ADB5BD;
-  --color-neutral-600: #6C757D;
-  --color-neutral-700: #495057;
-  --color-neutral-800: #343A40;
-  --color-neutral-900: #212529;
-  
-  /* Colors - Semantic */
-  --color-text-primary: var(--color-neutral-900);
-  --color-text-secondary: var(--color-neutral-700);
-  --color-text-tertiary: var(--color-neutral-500);
-  --color-background-primary: var(--color-neutral-100);
-  --color-background-secondary: var(--color-neutral-200);
-  --color-border: var(--color-neutral-300);
-  
-  /* Colors - Interactive */
-  --color-interactive-primary: var(--color-brand-primary);
-  --color-interactive-primary-hover: #E6C900;
-  --color-interactive-primary-active: #CCB200;
-  --color-interactive-secondary: var(--color-neutral-200);
-  --color-interactive-secondary-hover: var(--color-neutral-300);
-  --color-interactive-secondary-active: var(--color-neutral-400);
-  --color-interactive-danger: var(--color-brand-tertiary);
-  --color-interactive-danger-hover: #E65A5A;
-  --color-interactive-danger-active: #CC4A4A;
-  
-  /* Colors - States */
-  --color-state-hover: var(--color-neutral-200);
-  --color-state-active: var(--color-neutral-300);
-  --color-state-focus: var(--color-brand-primary);
-  --color-state-disabled: var(--color-neutral-400);
-  --color-state-selected: var(--color-brand-primary);
-  --color-state-selected-hover: var(--color-interactive-primary-hover);
-  
-  /* Colors - Feedback */
-  --color-feedback-success: #2ECC71;
-  --color-feedback-success-light: #E6F5ED;
-  --color-feedback-error: #E74C3C;
-  --color-feedback-error-light: #FFE6E6;
-  --color-feedback-warning: #F1C40F;
-  --color-feedback-warning-light: #FFF5E6;
-  --color-feedback-info: #3498DB;
-  --color-feedback-info-light: #E6F0FF;
-  
-  /* Colors - Status */
-  --color-success: var(--color-feedback-success);
-  --color-error: var(--color-feedback-error);
-  --color-warning: var(--color-feedback-warning);
-  --color-info: var(--color-feedback-info);
-  
-  /* Colors - Surface */
-  --color-surface-primary: var(--color-background-primary);
-  --color-surface-secondary: var(--color-background-secondary);
-  --color-surface-tertiary: var(--color-neutral-300);
-  --color-surface-overlay: rgba(0, 0, 0, 0.5);
-  
-  /* Colors - Border */
-  --color-border-primary: var(--color-border);
-  --color-border-secondary: var(--color-neutral-400);
-  --color-border-tertiary: var(--color-neutral-500);
-  --color-border-focus: var(--color-state-focus);
-  
-  /* Typography */
-  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-family-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  
-  /* Spacing */
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 0.75rem;
-  --spacing-4: 1rem;
-  --spacing-5: 1.25rem;
-  --spacing-6: 1.5rem;
-  --spacing-8: 2rem;
-  --spacing-10: 2.5rem;
-  --spacing-12: 3rem;
-  --spacing-16: 4rem;
-  --spacing-20: 5rem;
-  
-  /* Border Radius */
-  --radius-sm: 0.125rem;
-  --radius-md: 0.25rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 1rem;
-  --radius-full: 9999px;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 10%);
-  
-  /* Transitions */
-  --transition-fast: 150ms;
-  --transition-normal: 250ms;
-  --transition-slow: 350ms;
-  
-  /* Z-index */
-  --z-index-dropdown: 1000;
-  --z-index-sticky: 1020;
-  --z-index-fixed: 1030;
-  --z-index-modal: 1040;
-  --z-index-popover: 1050;
-  --z-index-tooltip: 1060;
-}
 
 /* Base styles */
 body {
@@ -163,15 +35,17 @@ body {
 
 /* Heading styles */
 .chakra-heading {
-  font-weight: 700;
+  font-weight: var(--font-family-heading-weight);
   color: var(--color-text-primary);
   font-family: var(--font-family-heading);
+  text-transform: var(--font-family-heading-style);
 }
 
 /* Text styles */
 .chakra-text {
   color: var(--color-text-secondary);
   font-family: var(--font-family-base);
+  font-weight: var(--font-family-base-weight);
 }
 
 /* Container styles */

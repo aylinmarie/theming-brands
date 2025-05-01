@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type Theme = 'default' | 'nike' | 'adidas' | 'puma';
+export type Theme = 'adidas' | 'nike';
 
 interface ThemeContextType {
   theme: Theme;
@@ -12,10 +12,10 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('default');
+  const [theme, setTheme] = useState<Theme>('adidas');
 
   useEffect(() => {
-    // Get the initial theme from localStorage or use default
+    // Get the initial theme from localStorage or use adidas
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     if (savedTheme) {
       setTheme(savedTheme);

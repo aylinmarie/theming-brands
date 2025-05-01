@@ -8,7 +8,6 @@ export const ThemeSwitcher = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const themes = [
-    { id: 'default', label: 'Default' },
     { id: 'nike', label: 'Nike' },
     { id: 'adidas', label: 'Adidas' },
   ];

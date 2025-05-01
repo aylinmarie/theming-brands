@@ -1,6 +1,29 @@
-import { Box, Container, Flex, Heading, Text, Button, Stack } from "@chakra-ui/react"
+"use client"
+import { Box, Container, Flex, Heading, Text, Button, Stack, Image, Spinner } from "@chakra-ui/react"
 import { ThemeSwitcher } from "../components/ThemeSwitcher"
+import { useTheme } from "../context/ThemeContext"
+import { LogoImage } from "../components/LogoImage"
+import { useState, useEffect } from "react"
+
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return (
+      <Box minH="100vh" display="flex" alignItems="center" justifyContent="center">
+        <Spinner size="xl" />
+      </Box>
+    )
+  }
+
+  const { theme } = useTheme()
   return (
     <Box minH="100vh" display="flex" flexDirection="column">
       {/* Navigation */}
@@ -23,8 +46,9 @@ export default function Home() {
       <Box as="section" flex="1" display="flex" alignItems="center" justifyContent="center">
         <Container maxW="container.xl">
           <Stack gap={8} align="center" textAlign="center">
+            <LogoImage />
             <Heading size="2xl" maxW="800px">
-              Build beautiful, responsive websites with ease
+              Theme it, but make it {theme.charAt(0).toUpperCase() + theme.slice(1)}
             </Heading>
             <Text fontSize="xl" color="gray.600" maxW="600px">
               Our platform helps you create stunning websites that look great on any device. 

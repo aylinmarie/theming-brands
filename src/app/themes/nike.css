@@ -80,6 +80,9 @@
     /* Typography */
     --font-family-base: "Helvetica Now Text Medium",Helvetica,Arial,sans-serif;
     --font-family-heading: "Barlow", sans-serif;    
+    --font-family-heading-weight: 700;
+    --font-family-base-weight: 400;
+    --font-family-heading-transform: normal;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
