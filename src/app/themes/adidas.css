@@ -78,15 +78,21 @@
     
     /* Typography */
     --font-family-base: 'AdihausDIN','Helvetica', 'Arial', sans-serif;
+    --font-family-base-weight: 400;
+    --font-family-base-transform: none;
+    --font-family-base-size: 16px;
+    --font-family-base-letter-spacing: 0;
+
     --font-family-heading: 'AdihausDIN','Helvetica', 'Arial', sans-serif;
     --font-family-heading-weight: 700;
-    --font-family-base-weight: 400;
     --font-family-heading-transform: uppercase;
+    --font-family-heading-letter-spacing: 0;
+
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
     --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
+    --font-size-xl: 38px;
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 1.875rem;
     --font-size-4xl: 2.25rem;

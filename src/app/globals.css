@@ -9,6 +9,22 @@ body {
   background-color: var(--color-background-primary);
 }
 
+h1 {
+  font-size: var(--font-size-2xl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+h4 {
+  font-size: var(--font-size-base);
+}
+
 .chakra-button {
   font-weight: 500;
   border-radius: var(--radius-md);
@@ -38,14 +54,17 @@ body {
   font-weight: var(--font-family-heading-weight);
   color: var(--color-text-primary);
   font-family: var(--font-family-heading);
-  text-transform: var(--font-family-heading-style);
+  text-transform: var(--font-family-heading-transform);
+  letter-spacing: var(--font-family-heading-letter-spacing);
 }
 
 /* Text styles */
 .chakra-text {
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   font-family: var(--font-family-base);
   font-weight: var(--font-family-base-weight);
+  font-size: var(--font-family-base-size);
+  letter-spacing: var(--font-family-base-letter-spacing);
 }
 
 /* Container styles */

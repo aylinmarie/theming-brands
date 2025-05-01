@@ -32,10 +32,6 @@ export default function Home() {
           <Flex justify="space-between" align="center" px={4}>
             <Heading size="md">Theme Brands</Heading>
             <Stack direction="row" gap={4}>
-              <Button variant="ghost">Features</Button>
-              <Button variant="ghost">Pricing</Button>
-              <Button variant="ghost">About</Button>
-              <Button>Get Started</Button>
               <ThemeSwitcher />
             </Stack>
           </Flex>
@@ -51,14 +47,10 @@ export default function Home() {
               Theme it, but make it {theme.charAt(0).toUpperCase() + theme.slice(1)}
             </Heading>
             <Text fontSize="xl" color="gray.600" maxW="600px">
-              Our platform helps you create stunning websites that look great on any device. 
-              Get started today and bring your vision to life.
+              Quick demo of how design tokens and design systems can easily theme for different platforms.
             </Text>
             <Stack direction="row" gap={4}>
               <Button size="lg">
-                Get Started
-              </Button>
-              <Button size="lg" variant="outline">
                 Learn More
               </Button>
             </Stack>
